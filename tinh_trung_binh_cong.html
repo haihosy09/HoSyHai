@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>điểm trung bình 3 môn toán lý hóa</title>
+</head>
+<body>
+<h1>điểm trung bình 3 môn toán lý hóa</h1>
+<form>
+    <label>điểm toán</label>
+    <label for="toan"></label><input type="number" id="toan" value="điểm toán"><br>
+    <label>điểm lý</label>
+    <label for="ly"></label><input type="number" id="ly" value="điểm lý"><br>
+    <label>điểm hóa</label>
+    <label for="hoa"></label><input type="number" id="hoa" value="đểm hóa"><br>
+    <button onclick="avg()">tính điểm trung bình</button>
+</form>
+<script>
+    function avg() {
+        let toan = parseFloat(document.getElementById(`toan`).value);
+        let ly = parseFloat(document.getElementById(`ly`).value);
+        let hoa = parseFloat(document.getElementById(`hoa`).value);
+
+
+        let diemtrungbinh = (toan + ly + hoa / 3);
+        alert(`điểm trung bình 3 môn là:`+ diemtrungbinh);
+    }
+</script>
+</body>
+</html>
