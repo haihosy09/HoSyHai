@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form>
+  <label>number1</label>
+  <input type="number" id="number1" value="nhâp số a">
+  <label>number2</label>
+  <input type="number" id="number2" value="nhập số b"><br>
+  <button onclick="tinhTong()">tổng(+)</button>
+  <button onclick="tinhHieu()">hiệu(-)</button>
+  <button onclick="tinhNhan()">tích(*)</button>
+  <button onclick="tinhChia()">thương(/)</button>
+
+</form>
+<script>
+  function tinhTong() {
+    let number1 = parseFloat(document.getElementById(`number1`).value);
+    let number2 = parseFloat(document.getElementById(`number2`).value);
+
+    let tong = number1 + number2;
+    alert(` tổng của 2 số là :`+tong);
+
+  }
+  function tinhHieu() {
+    let number1 = parseFloat(document.getElementById(`number1`).value);
+    let number2 = parseFloat(document.getElementById(`number2`).value);
+
+    let hieu = number1 - number2;
+    alert(` hiệu của 2 số là:`+hieu);
+
+  }
+  function tinhNhan() {
+    let number1 = parseFloat(document.getElementById(`number1`).value);
+    let number2 = parseFloat(document.getElementById(`number2`).value);
+
+    let tich = number1 * number2;
+    alert(` tích của 2 số là:`+tich);
+
+  }
+  function tinhChia() {
+    let number1 = parseFloat(document.getElementById(`number1`).value);
+    let number2 = parseFloat(document.getElementById(`number2`).value);
+
+    let thuong = number1 / number2;
+    alert(` thương của 2 số là:`+thuong);
+
+  }
+</script>
+
+</body>
+</html>
