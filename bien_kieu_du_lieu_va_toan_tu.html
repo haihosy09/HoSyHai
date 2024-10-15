@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, Kiểu Dữ Liệu Và Toán Tử</title>
+</head>
+<body>
+<h1>Biến, kiểu dữ liệu và toán tử</h1>
+<h2>điểm trung bình và tổng của ba môn toán lý hóa của một sinh viên</h2>
+<form>
+    <label>bán kính r</label>
+    <label for="bán kính r"></label><input type="number" id="bán kính r" value="ban kinh r">
+<button onclick="ban_kinh_r()">tính chu vi</button>
+</form>
+<script>
+  function ban_kinh_r() {
+         let ban_kinh_r = parseFloat(document.getElementById(`bán kính r`).value);
+         const HANGSOPI = (3,14);
+
+         let bankinhr = (ban_kinh_r*HANGSOPI*2);
+         alert(`bán kính  hình tròn`+bankinhr)
+    }
+</script>
+</body>
+</html>
