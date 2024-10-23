@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tổng của 20 số đầu tiên trong day fibonaccin</h1>
+<script>
+  let n1=1,n2=2,nextTerm;
+  let sum =n1+n2;
+for (let i=3;i <=20;i++){
+  nextTerm=n1+n2;
+  sum+=nextTerm;
+  n1=n2;
+  n2=nextTerm;
+}
+document.write("tổng của 20 số đầu tiên trong dãy fibonaccin là:"+sum);
+</script>
+</body>
+</html>

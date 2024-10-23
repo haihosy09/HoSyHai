@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>số đầu tiên trong day fibonaccin</h1>
+<script>
+    let n1 =0, n2 =1, nextTerm;
+    while (true){
+        nextTerm = n1 +n2;
+        if (nextTerm%5===0){
+            document.write("số đầu tiên chia hết cho 5 là: " + nextTerm);
+            break;
+        }
+        n1 = n2;
+        n2 = nextTerm;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>20 Số Nguyên Đầu Tiên</h1>
+<script>
+ let number = prompt("nhập số nguyên tố");
+ let count =0;
+ let N=2;
+ function prime(A) {
+   if ( A<= 1)
+     return false;
+   for (let i = 2; i <= Math.sqrt(A); i++) {
+     if (A % i === 0) return false;
+   }
+   return true;
+ }
+
+ while (count < number) {
+   if (prime(N)) {
+     document.write(N + "<br>");
+     count++;
+   }
+   N++;
+ }
+</script>
+
+</body>
+</html>

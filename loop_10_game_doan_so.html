@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="startgame()">bắt đầu</button>
+<script>
+  function startgame() {
+    let so = +prompt("bạn hãy chọn một số bất kì ");
+    let soNgauNhien = Math.random() * so +1;
+    for (let miss = 0;miss < 3 ; miss++){
+      let soDuDoan = +prompt("Nhập số bạn dự đoán");
+      if( soDuDoan < soNgauNhien){
+        alert("Số bạn dự đoán bé hơn");
+      }else if(soDuDoan > soNgauNhien) {
+        alert("Số bạn dự đoán lớn hơn");
+      } else {
+        alert("bạn đã thắng " + soDuDoan);
+        break;
+      }
+      if(miss === 2){
+        alert("bạn đã thua");
+      }
+    }
+  }
+</script>
+</body>
+</html>
