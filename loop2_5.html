@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let tien = parseInt(prompt("nhập số tiền ban đầu"));
+  let thang = parseInt(prompt(" nhập số tháng muốn vay"));
+  let lai = parseInt(prompt("lãi xuất hàng tháng"))/100;
+  for (let i = 1; i<= thang;i++){
+      tien += tien*lai;
+  }
+document.write(" số tiền sau"+thang+"tháng là: "+tien.toFixed(2)+"vnd");
+</script>
+</body>
+</html>
