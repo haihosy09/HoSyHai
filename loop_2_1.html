@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function printFibonacci(n) {
+    let a= 0, b= 1, nextTerm;
+    console.log(a);
+    if (n>1){
+        console.log(b);
+    }
+    for (let i =3; i<n; i++){
+        nextTerm = a+b;
+        console.log(nextTerm);
+        a = b;
+        b = nextTerm;
+    }
+}
+let num = parseInt(prompt(" nhập số phần tử bạn muốn:"))
+printFibonacci(num);
+</script>
+</body>
+</html>
