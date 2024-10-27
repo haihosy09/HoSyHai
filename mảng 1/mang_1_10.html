@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let englishWords = ["hello", "goodbye", "apple", "book", "computer"];
+  let vietnameseMeanings = ["xin chào", "tạm biệt", "táo", "sách", "máy tính"];
+  function translate(word) {
+    let index = englishWords.indexOf(word.toLowerCase());
+    if (index !== -1) {
+      return vietnameseMeanings[index];
+    } else {
+      return "Từ này không có trong từ điển.";
+    }
+  }
+
+  let wordToTranslate = prompt("Nhập từ tiếng Anh bạn muốn tra cứu:");
+  let translation = translate(wordToTranslate);
+  console.log(`Nghĩa của từ "${wordToTranslate}"là:${translation}`);
+  document.write(`Nghĩa của từ "${wordToTranslate}"là:${translation}`);
+</script>
+</body>
+</html>

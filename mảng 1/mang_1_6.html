@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jhhik</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i<=10; i++){
+        let number = parseInt(prompt(`nhập số nguyên thứ ${i+1}:`),10);
+        array.push(number);
+    }
+    let v = parseInt(prompt("nhập số nguyen v: "),10);
+    if (array.includes(v)) {
+        console.log(`${v} is in the array`);
+    }else {
+        console.log(`${v}is not in the array`);
+    }
+</script>
+</body>
+</html>

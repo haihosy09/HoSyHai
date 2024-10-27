@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr =[];
+  let n = parseInt(prompt(" nhập số nguyên"),10);
+
+  for (let i = 0; i<n;i++) {
+    let input = parseInt(prompt(`nhập phần tử thứ ${i + 1}`), 10);
+    arr.push(input);
+  }
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+let total =0;
+  for (let i=0; i<arr.length;i++){
+    total+=arr[i];
+  }
+  const avg =total/arr.length;
+  console.log( "giá trị lớn nhất la:"+max);
+  console.log("giá trị trung bình :"+avg);
+</script>
+
+</body>
+</html>

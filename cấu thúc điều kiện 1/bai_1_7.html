@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tinhCuocDienThoai(soPhut) {
+    let cuocPhi;
+
+    if (soPhut <= 50) {
+      cuocPhi = soPhut * 1000; // 50 phút đầu, cước 1000 đồng/phút
+    } else if (soPhut <= 100) {
+      cuocPhi = 50 * 1000 + (soPhut - 50) * 800; // Từ phút 51 đến 100, cước 800 đồng/phút
+    } else {
+      cuocPhi = 50 * 1000 + 50 * 800 + (soPhut - 100) * 500; // Từ phút 101 trở đi, cước 500 đồng/phút
+    }
+
+    return cuocPhi;
+  }
+  let soPhut = parseInt(prompt("nhập số phút đã gọi"));
+  const cuocDienThoai = tinhCuocDienThoai(soPhut);
+document.write("Cước điện thoại: " + cuocDienThoai + " đồng");
+</script>
+</body>
+</html>

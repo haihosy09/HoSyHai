@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr =[];
+
+  for (let i = 0; i<10;i++) {
+    let number = parseInt(prompt(`nhập phần tử thứ ${i + 1}`), 10);
+    arr.push(number);
+  }
+  arr.sort((a,b)=>b-a);
+  console.log("mảng đã được sắp xếp theo thứ tự giảm dần:",arr);
+</script>
+</body>
+</html>

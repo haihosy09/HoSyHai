@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [];
+  for (let i =0; i <10; i++){
+    let number = parseInt(prompt(`nhập phần tử thứ ${i+1}của mảng a:`),10);
+    a.push(number);
+  }
+  let b = [];
+  for (let i =0; i <10; i++){
+    let number = parseInt(prompt(`nhập phần tử thứ ${i+1}của mảng b:`),10);
+    b.push(number);
+  }
+  let c = a.concat(b);
+  console.log("mảng c sau khi gộp a và b:",c);
+</script>
+</body>
+</html>

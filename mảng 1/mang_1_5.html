@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let n = parseInt(prompt(" nhập số nguyên"),10);
+ let nevativeCount = [];
+  for (let i = 0; i<n;i++) {
+    let input = parseInt(prompt(`nhập số nguyên thứ ${i+1}:`),10);
+   nevativeCount.push(input);
+    if (n < 0) {
+    nevativeCount.push(n);
+     nevativeCount++;
+    }
+  }
+  console.log(nevativeCount);
+</script>
+</body>
+</html>

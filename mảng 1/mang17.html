@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let array = [];
+  for (let i = 0; i<=10; i++){
+    let number = parseInt(prompt(`nhập số nguyên thứ ${i+1}:`),10);
+    array.push(number);
+  }
+  let v = parseInt(prompt("nhập số nguyen v: "),10);
+  const index = array.indexOf(v);
+  if (index !== -1) {
+    array.splice(index, 1);
+    console.log(`${v} is the array and has been removed`);
+  }
+  console.log("mảng sau khi kiểm tra :",array);
+</script>
+</body>
+</html>

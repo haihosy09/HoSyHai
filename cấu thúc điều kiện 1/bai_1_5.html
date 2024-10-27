@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let dkt= parseInt(prompt("nhập điểm kiểm tra"));
+  let dgk= parseInt(prompt("nhập điểm thi giữ kì"));
+  let dck= parseInt(prompt(" nhập điểm thi cuối kì"));
+  if ( (dkt+dgk+dck)/3>=8 ) {
+    alert("học sinh giỏi");
+    }else {
+    if ((dkt + dgk + dck) / 3 >= 6.5) {
+      alert("học sinh khá");
+    } else {
+      if ((dkt + dgk + dck) / 3 >= 5) {
+        alert("học sinh trung bình");
+      } else {
+        alert("học sinh yếu");
+      }
+    }
+  }
+
+
+</script>
+</body>
+</html>
