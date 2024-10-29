@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const chuoi = " đây là một chuỗi mẫu để đếm số từ";
+  let soTu = 0;
+  let trongTu = false;
+  for (let i = 0; i < chuoi.length; i++){
+    if (chuoi[i]!==` `&& ! trongTu){
+      soTu++;
+      trongTu= true;
+    }else if (chuoi[i]===` `){
+      trongTu = false;
+    }
+  }
+  console.log(`số lượng trong chuỗi;`,soTu);
+</script>
+</body>
+</html>

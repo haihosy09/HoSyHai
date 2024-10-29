@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const mangKyTu = [`a`,`1`,`b`,`2`,`c`,`3`,`d`,`4`,`e`,`5`];
+  const kichThuoc = mangKyTu.length;
+  console.log("kích thước của mảng: ",kichThuoc);
+  let soLuongChuSo=0;
+  for (let i = 0; i<kichThuoc; i++){
+    if (!isNaN(mangKyTu[i]) && mangKyTu[i] !==` `){
+      soLuongChuSo++;
+    }
+  }
+  console.log(" số lượng ký tự số trong mảng:",soLuongChuSo);
+</script>
+</body>
+</html>
