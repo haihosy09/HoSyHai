@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function timSoNhonhat(a,b,c) {
+    return Math.min(a, Math.min(b,c));
+  }
+  let so1 = +prompt(" nhập số 1");
+  let so2 = +prompt(" nhập số 2");
+  let so3 = +prompt("nhập số 3");
+  let soNhoNhat = timSoNhonhat(so1,so2,so3);
+  console.log("số nhỏ nhất trong ba số "+ so1+","+so2+","+so3+" là: "+soNhoNhat);
+</script>
+</body>
+</html>

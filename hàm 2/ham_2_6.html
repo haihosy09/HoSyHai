@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function kiemTraSoNguyenDuong(so) {
+    return Number.isInteger(so) && so >0;
+  }
+  let so = +prompt("nhập số bất kì");
+  let ketQua = kiemTraSoNguyenDuong(so);
+  console.log("số "+ so + " là số nguyên dương: "+ ketQua);
+</script>
+</body>
+</html>

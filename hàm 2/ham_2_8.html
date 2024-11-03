@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function daoNguocMang(mang) {
+    let mangDaoNguoc = [];
+    for (let i = mang.length - 1; i >= 0; i--) {
+      mangDaoNguoc.push(mang[i]);
+    }
+    return mangDaoNguoc;
+  }
+  let mang = [1, 2, 3, 4, 5];
+  let mangDaDaoNguoc = daoNguocMang(mang);
+  console.log("Mảng ban đầu: " + mang);
+  console.log("Mảng đã đảo ngược: " + mangDaDaoNguoc)
+</script>
+</body>
+</html>

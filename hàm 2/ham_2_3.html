@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tinhGiaiThua(n) {
+    if (n < 0) {
+      return "Giai thừa không xác định cho số âm.";
+    }
+    let giaiThua = 1;
+    for (let i = 1; i <= n; i++) {
+      giaiThua *= i;
+    }
+    return giaiThua;
+  }
+
+  let n = + prompt("nhập số bất kì");
+  let ketQua = tinhGiaiThua(n);
+
+  console.log("Giai thừa của " + n + " là: " + ketQua);
+</script>
+</body>
+</html>

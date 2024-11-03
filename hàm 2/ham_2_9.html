@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function kiemTraKyTuTrongMang(mangKyTu, kyTu) {
+    let count = 0;
+    for (let i = 0; i < mangKyTu.length; i++) {
+      if (mangKyTu[i] === kyTu) {
+        count++;
+      }
+    }
+    return count > 0 ? count : -1;
+  }
+  let mangKyTu = ['a', 'b', 'c', 'a', 'd', 'a'];
+  let kyTu = 'a';
+
+  let ketQua = kiemTraKyTuTrongMang(mangKyTu, kyTu);
+
+  console.log("Ký tự '" + kyTu + "' xuất hiện " + ketQua + " lần trong mảng.")
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm Tra Ký Tự Số</h1>
+<p>Nhập một ký tự:</p>
+<input type="text" id="inputKyTu" maxlength="1" />
+<button onclick="kiemTra()">Kiểm tra</button>
+
+<p id="result"></p>
+
+<script>
+  function kiemTraKyTuLaSo(kyTu) {
+    return /^[0-9]$/.test(kyTu);
+  }
+  function kiemTra() {
+    const kyTu = document.getElementById('inputKyTu').value;
+    const ketQua = kiemTraKyTuLaSo(kyTu);
+    const resultElement = document.getElementById('result');
+
+    if (ketQua) {
+      resultElement.innerText = "Ký tự '" + kyTu + "' là số.";
+    } else {
+      resultElement.innerText = "Ký tự '" + kyTu + "' không phải là số.";
+    }
+  }
+</script>
+</body>
+</html>
