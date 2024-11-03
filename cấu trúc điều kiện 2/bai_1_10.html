@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let kWh = +prompt("nhập số điện đã dùng");
+    let tienDien = 0;
+
+    if (kWh <= 0) {
+      console.log("Số kWh không hợp lệ.");
+    } else if (kWh <= 50) {
+      tienDien = kWh * 1678;
+    } else if (kWh <= 100) {
+      tienDien = (50 * 1678) + ((kWh - 50) * 1734);
+    } else if (kWh <= 200) {
+      tienDien = (50 * 1678) + (50 * 1734) + ((kWh - 100) * 2014);
+    } else if (kWh <= 300) {
+      tienDien = (50 * 1678) + (50 * 1734) + (100 * 2014) + ((kWh - 200) * 2536);
+    } else if (kWh <= 400) {
+      tienDien = (50 * 1678) + (50 * 1734) + (100 * 2014) + (100 * 2536) + ((kWh - 300) * 2834);
+    } else {
+      tienDien = (50 * 1678) + (50 * 1734) + (100 * 2014) + (100 * 2536) + (100 * 2834) + ((kWh - 400) * 2927);
+    }
+
+    console.log("Số tiền điện cần trả là: " + tienDien + " VNĐ");
+
+</script>
+</body>
+</html>

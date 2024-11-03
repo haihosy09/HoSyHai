@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let thuNhapTinhThue = prompt("nhập thu nhập cá nhân");
+  let thueThuNhap =0;
+  if (thuNhapTinhThue <= 5000000) {
+    thueThuNhap = thuNhapTinhThue * 0.05;
+  } else if (thuNhapTinhThue <= 10000000) {
+    thueThuNhap = (5000000 * 0.05) + ((thuNhapTinhThue - 5000000) * 0.1);
+  } else if (thuNhapTinhThue <= 18000000) {
+    thueThuNhap = (5000000 * 0.05) + (5000000 * 0.1) + ((thuNhapTinhThue - 10000000) * 0.15);
+  } else if (thuNhapTinhThue <= 32000000) {
+    thueThuNhap = (5000000 * 0.05) + (5000000 * 0.1) + (8000000 * 0.15) + ((thuNhapTinhThue - 18000000) * 0.2);
+  } else if (thuNhapTinhThue <= 52000000) {
+    thueThuNhap = (5000000 * 0.05) + (5000000 * 0.1) + (8000000 * 0.15) + (14000000 * 0.2) + ((thuNhapTinhThue - 32000000) * 0.25);
+  } else if (thuNhapTinhThue <= 80000000) {
+    thueThuNhap = (5000000 * 0.05) + (5000000 * 0.1) + (8000000 * 0.15) + (14000000 * 0.2) + (20000000 * 0.25) + ((thuNhapTinhThue - 52000000) * 0.3);
+  } else {
+    thueThuNhap = (5000000 * 0.05) + (5000000 * 0.1) + (8000000 * 0.15) + (14000000 * 0.2) + (20000000 * 0.25) + (28000000 * 0.3) + ((thuNhapTinhThue - 80000000) * 0.35);
+  }
+
+  console.log("Số thuế thu nhập cá nhân cần trả là: " + thueThuNhap + " VNĐ");
+</script>
+</body>
+</html>

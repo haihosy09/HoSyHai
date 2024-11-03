@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let a = 1;
+  let b = -3;
+  let c = 2;
+  if (a === 0) {
+    console.log("Đây không phải là phương trình bậc hai.");
+  } else {
+    let delta = b * b - 4 * a * c;
+
+    if (delta < 0) {
+      console.log("Phương trình vô nghiệm.");
+    } else if (delta === 0) {
+      let x = -b / (2 * a);
+      console.log("Phương trình có nghiệm kép x =", x);
+    } else {
+      let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+      let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+      console.log("Phương trình có hai nghiệm phân biệt:");
+      console.log("x1 =", x1);
+      console.log("x2 =", x2);
+    }
+  }
+</script>
+</body>
+</html>
