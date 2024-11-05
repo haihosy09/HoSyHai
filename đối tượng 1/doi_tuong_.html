@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Định nghĩa lớp Temperature
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        // Phương thức chuyển đổi từ Celsius sang Fahrenheit
+        getFahrenheit() {
+            return (this.celsius * 9 / 5) + 32;
+        }
+
+        // Phương thức chuyển đổi từ Celsius sang Kelvin
+        getKelvin() {
+            return this.celsius + 273.15;
+        }
+    }
+
+
+    const temperature = new Temperature(25);
+     temperature.getKelvin(25);
+    console.log("nhiệt độ kelvin là "+ temperature.getKelvin());
+
+    temperature.getFahrenheit(25);
+    console.log("nhiệt độ fahrenheit là "+ temperature.getFahrenheit());
+</script>
+
+</body>
+</html>

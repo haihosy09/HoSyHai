@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = "mycanvans" width="500" height="300" style="border: 1px solid #000000;"></canvas>
+<p id = "info"></p>
+<script>
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        // getHeight(){
+        //     return this.height;
+        // }
+        // getWidth(){
+        //     return this.width;
+        // }
+        getArea() {
+            return this.height * this.width
+        }
+
+        getPerimeter() {
+            return (this.height + this.width) * 2
+        }
+
+        draw(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(50, 50, this.width, this.height);
+        }
+    }
+
+
+    const rectangle = new Rectangle(200, 100);
+
+    rectangle.getPerimeter();
+    document.write("chu vi hinh chữ nhật là "+rectangle.getPerimeter());
+
+    rectangle.getArea();
+    document.write("diện tích hình chữ nhật là" +rectangle.getArea());
+
+    rectangle.draw("myCanvas");
+
+    rectangle.width = 300;
+    rectangle.height = 150;
+
+    const info = document.getElementById("info");
+         info.innerHTML =`Diện tích: $
+    {rectangle.getArea()}<br>Chu vi: $
+        {rectangle.getPerimeter()}`;
+        rectangle.draw("myCanvas");
+</script>
+</body>
+</html>
