@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Mô phỏng Công tắc và Bóng đèn</h1>
+<button id="switchButton">Bật Công tắc</button>
+<p id="lampStatus">Trạng thái bóng đèn: Tắt</p>
+
+<script>
+  // Lớp ElectricLamp
+  class ElectricLamp {
+    constructor() {
+      this.status = false;
+    }
+
+    turnOn() {
+      this.status = true;
+      console.log("Đèn bật!");
+    }
+
+    turnOff() {
+      this.status = false;
+      console.log("Đèn tắt!");
+    }
+
+    getStatus() {
+      return this.status ? "Bật" : "Tắt";
+    }
+  }
+
+
+  class SwitchButton {
+    constructor() {
+      this.status = false;
+      this.lamp = null;
+    }
+
+    connectToLamp(lamp) {
+      this.lamp = lamp;
+    }
+
+    switchOn() {
+      if (this.lamp) {
+        this.status = true;
+        this.lamp.turnOn();
+        this.updateLampStatus();
+      }
+    }
+
+    switchOff() {
+      if (this.lamp) {
+        this.status = false;
+        this.lamp.turnOff();
+        this.updateLampStatus();
+      }
+    }
+
+    toggle() {
+      if (this.status) {
+        this.switchOff();
+      } else {
+        this.switchOn();
+      }
+    }
+
+    updateLampStatus() {
+      const lampStatus = document.getElementById("lampStatus");
+      lampStatus.textContent = "Trạng thái bóng đèn: " + this.lamp.getStatus();
+    }
+  }
+
+  const lamp = new ElectricLamp();
+  const switchButton = new SwitchButton();
+
+  // Kết nối công tắc với bóng đèn
+  switchButton.connectToLamp(lamp);
+
+
+  const button = document.getElementById("switchButton");
+  button.addEventListener("click", function() {
+    switchButton.toggle();
+    button.textContent = switchButton.status ? "Tắt Công tắc" : "Bật Công tắc";
+  });
+</script>
+</body>
+</html>
