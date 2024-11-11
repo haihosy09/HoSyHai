@@ -6,31 +6,31 @@
 </head>
 <body>
 <script>
-  function iSymmetricArray(arr) {
-    let len = arr.length;
-    for (let i = 0; i < len/2; i++){
-      if (arr[i] !== arr[len-1-i]){
-        return false;
-      }
+    function iSymmetricArray(arr) {
+        let len = arr.length;
+        for (let i = 0; i < len/2; i++){
+            if (arr[i] !== arr[len-1-i]){
+                return false;
+            }
+        }
+        return true;
     }
-    return true;
-  }
-  let n = parseInt(prompt(" nhập độ dài của mảng"));
-  if (n>0){
-     let arr = [];
-     for (let i =0; i <n;i++) {
-       let element = parseInt(prompt(` nhập phần tử thứ ${i + 1}: `));
-       arr.push(element);
-     }
+    let n;
+    do {
+        n = prompt("độ dài của mảng");
+    }while (n<=0 || n%1 !==0);
+    let arr = [];
+    for (let i =0; i <n;i++) {
+        let element = parseInt(prompt(` nhập phần tử thứ ${i + 1}: `));
+        arr.push(element);
+    }
     console.log(" mảng đã nhập là :"+arr);
-     if (iSymmetricArray(arr)){
-       console.log("ok");
-     }else {
-       console.log("no");
-     }
-  }else {
-    console.log("độ dài không hợp lệ")
-  }
+    if (iSymmetricArray(arr)){
+        console.log("ok");
+    }else {
+        console.log("no");
+    }
+
 </script>
 </body>
 </html>
