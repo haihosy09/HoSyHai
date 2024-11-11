@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function find(x) {
+    // Kiểm tra xem x có phải là phân số (dạng chuỗi có chứa "/")
+    if (typeof x !== "string" || !x.includes("/")) {
+      console.log("ko phải phân số");
+      return;
+    }
+
+    // Tách tử số và mẫu số từ chuỗi x
+    let [numerator, denominator] = x.split("/").map(Number);
+
+    // Kiểm tra nếu tử số hoặc mẫu số không hợp lệ hoặc mẫu số bằng 0
+    if (isNaN(numerator) || isNaN(denominator) || denominator === 0) {
+      console.log("ko phải phân số");
+      return;
+    }
+
+    // Tìm ước chung lớn nhất (GCD) bằng cách sử dụng vòng lặp
+    let gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+
+    // Rút gọn phân số
+    let divisor = gcd(Math.abs(numerator), Math.abs(denominator));
+    numerator /= divisor;
+    denominator /= divisor;
+
+
+    console.log(denominator === 1 ? numerator : `${numerator}/${denominator}`);
+  }
+  let input = prompt(" nhập số cần kiểm tra");
+  find(input);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkArray(arr) {
+    let hasNumber = false;
+    let hasletter = false;
+    for (let char of arr){
+      if (/[0-9]/.test(char)){
+        hasNumber = true;
+      }else if (/[a-zA-Z]/.test(char)){
+        hasletter= true;
+      }
+      if (hasNumber&&hasletter){
+        return -1 ;
+      }
+    }
+    return hasNumber ? 1 :0 ;
+  }
+
+  console.log(checkArray([`1`,`2`,`3`]));
+  console.log(checkArray([`a`,`b`,`c`]));
+  console.log(checkArray([`a`,`1`,`b`,`2`]));
+</script>
+</body>
+</html>

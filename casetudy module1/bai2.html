@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checktriangle(x,y,z) {
+        if (x<=0 || y <=0 || z <= 0){
+            console.log(" không phải là cạnh của 1 tam giác");
+            return;
+        }
+        if (x+y > z && x + z >y && y + z > x){
+            let a = Math.max ( x,y,z);
+            let b,c;
+            if (a=== x ){
+                b=y;
+                c=z;
+            }else if (a=== y ){
+                b = x;
+                c = z;
+            }else {
+                b = y;
+                c = x;
+            }
+            if (a * a === b * b + c * c){
+                console.log(" là 3 cạnh của 1 tam giác vuông");
+
+            }else {
+                console.log(" chỉ là 3 cạnh của một tam giác ");
+
+            }
+        }else {
+            console.log(" không phải là cạnh của 1 tam giác");
+        }
+    }
+    checktriangle(-3,5,7);
+    checktriangle(1,2,3);
+    checktriangle(3,4,5);
+    checktriangle(4,12,10);
+</script>
+</body>
+</html>

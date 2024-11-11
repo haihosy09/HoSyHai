@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArray() {
+        let n;
+        do {
+            n = parseInt(prompt("Nhập độ dài của mảng (số chẵn):"));
+        } while (n % 2 !== 0); // Kiểm tra nếu n không phải là số chẵn thì yêu cầu nhập lại
+
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let element = parseInt(prompt("Nhập phần tử thứ ${i + 1}:"));
+            arr.push(element);
+        }
+
+        console.log("Mảng đã nhập:", arr);
+        return arr;
+    }
+
+    function addElementsToArray(arr) {
+        let numberOfNewElements = parseInt(prompt("Nhập số phần tử muốn thêm vào mảng:"));
+        for (let i = 0; i < numberOfNewElements; i++) {
+            let newElement = parseInt(prompt("Nhập phần tử mới thứ ${i + 1}:"));
+            arr.push(newElement);
+        }
+
+        console.log("Mảng sau khi thêm các phần tử mới:", arr);
+    }
+
+    // Gọi hàm để nhập mảng và thêm phần tử mới
+    let arr = inputArray();
+    addElementsToArray(arr);
+</script>
+</body>
+</html>

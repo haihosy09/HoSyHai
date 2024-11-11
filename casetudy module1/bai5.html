@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMaxNumber(n) {
+        // Kiểm tra xem n có phải là số nguyên có 4 chữ số không
+        if (n < 1000 || n > 9999) {
+            return -1;
+        }
+
+        let maxNum = 0; // Biến lưu trữ số lớn nhất
+
+        // Chuyển đổi số n thành chuỗi để dễ dàng thao tác với từng chữ số
+        let str = n.toString();
+
+        // Duyệt qua từng chữ số, xóa nó và tạo số mới
+        for (let i = 0; i < str.length; i++) {
+            // Tạo số mới bằng cách bỏ chữ số tại vị trí i
+            let newNum = parseInt(str.slice(0, i) + str.slice(i + 1));
+
+            // Cập nhật maxNum nếu newNum lớn hơn
+            if (newNum > maxNum) {
+                maxNum = newNum;
+            }
+        }
+
+        return maxNum;
+    }
+
+    console.log(findMaxNumber(923));
+    console.log(findMaxNumber(1923));
+    console.log(findMaxNumber(9371));
+</script>
+</body>
+</html>

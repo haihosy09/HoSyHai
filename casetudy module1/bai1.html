@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt(" nhập độ dài của mảng"));
+    if (n>0 && n <=20){
+        let arr = [];
+        for (let i = 0; i <n;i++){
+            let element = parseInt(prompt(` nhập phần tử thứ ${i+1}:`));
+            arr.push(element);
+        }
+        console.log(` mảng đã nhập là :`+arr);
+        let isIncreasing = true;
+        let difference = arr[1]-arr[0];
+        for (let i = 1; i < arr.length; i ++){
+            if (arr[i]-arr[i-1] !== difference){
+                isIncreasing = false;
+                break;
+            }
+        }
+        if (isIncreasing){
+            console.log(`ok`);
+        }else {
+            console.log(`no`);
+        }
+    }else {
+        console.log(` độ dài của mảng không hợp lệ(n phải từ 1 đến 20`);
+        alert("độ dài của mảng không hợp lệ(n phải từ 1 đến 20")
+    }
+
+</script>
+</body>
+</html>
