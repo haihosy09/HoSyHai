@@ -14,27 +14,25 @@
 
         let arr = [];
         for (let i = 0; i < n; i++) {
-            let element = parseInt(prompt("Nhập phần tử thứ ${i + 1}:"));
+            let element = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
             arr.push(element);
         }
 
-        console.log("Mảng đã nhập:", arr);
-        return arr;
-    }
-
-    function addElementsToArray(arr) {
-        let numberOfNewElements = parseInt(prompt("Nhập số phần tử muốn thêm vào mảng:"));
-        for (let i = 0; i < numberOfNewElements; i++) {
-            let newElement = parseInt(prompt("Nhập phần tử mới thứ ${i + 1}:"));
-            arr.push(newElement);
+        alert("Mảng đã nhập:"+ arr);
+        let isOk = true;
+         for (let i = 0; i <arr.length - 1; i +=2){
+             if (arr[i]>=arr[i+1]){
+                 isOk = false;
+                 break;
+             }
         }
-
-        console.log("Mảng sau khi thêm các phần tử mới:", arr);
+         if (isOk){
+             alert("Ok")
+         }else {
+             alert("No")
+         }
     }
-
-    // Gọi hàm để nhập mảng và thêm phần tử mới
-    let arr = inputArray();
-    addElementsToArray(arr);
+    inputArray();
 </script>
 </body>
 </html>
