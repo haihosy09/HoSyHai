@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n > 50 || n <= 0);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let element = parseInt(prompt(`nhập phần tử thứ ${i + 1}`));
+        arr.push(element);
+    }
+    alert("mảng mới nhập là :" + arr);
+    let sum = 0;
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 3 === 0) {
+            sum += arr[i];
+            count++
+        }
+    }
+    if (count > 0) {
+        let average = sum / count;
+        alert(`giá trị trung bình của các phần tử chia hết cho 3 là : ${average}`);
+    } else {
+        alert("không có phần tử nào thỏa mãn điều kiện")
+    }
+</script>
+</body>
+</html>

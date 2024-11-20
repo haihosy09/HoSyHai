@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function isPerfectNumber(n) {
+    if (n <= 0) {
+      return false;
+    }
+    let sum = 0;
+    for (let i = 1; i <= n / 2; i++) {
+      if (n % i === 0) {
+        sum += i;
+      }
+    }
+    return sum === n;
+  }
+
+  let number1 = 6;
+  alert(isPerfectNumber(number1));
+  let number2 = 9;
+  alert(isPerfectNumber(number2));
+  let number3 = 28;
+  alert(isPerfectNumber(number3));
+</script>
+</body>
+</html>
