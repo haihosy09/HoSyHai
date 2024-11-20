@@ -18,10 +18,10 @@
     }
   }
 
-  let congNhan1 = new quanLy("1", "trương Tấn A", "11/11/1999", "Đà Nẵng", 20000, "Abc");
-  let congNhan2 = new quanLy("2", "trương Tấn  B", "12/11/1999", "Đà Nẵng", 20000, "Abc");
-  let congNhan3 = new quanLy("3", "trương Tấn C", "13/11/1999", "Đà Nẵng", 20000, "Abc");
-  let congNhan4 = new quanLy("4", "trương Tấn D", "14/11/1999", "Đà Nẵng", 20000, "Abc");
+  let congNhan1 = new quanLy("1", "Trương Tấn A", "11/11/1999", "Đà Nẵng", 20000, "Abc");
+  let congNhan2 = new quanLy("2", "Trương Tấn B", "12/11/1999", "Đà Nẵng", 20000, "Abc");
+  let congNhan3 = new quanLy("3", "Trương Tấn C", "13/11/1999", "Đà Nẵng", 20000, "Abc");
+  let congNhan4 = new quanLy("4", "Trương Tấn D", "14/11/1999", "Đà Nẵng", 20000, "Abc");
   let danhSachCongNhan = [congNhan1, congNhan2, congNhan3, congNhan4];
   display();
 
@@ -38,7 +38,7 @@
     for (let i = 0; i < danhSachCongNhan.length; i++) {
       tableString += `
                              <tr>
-                                <td>${i + 1}</td>
+                                <td>${danhSachCongNhan[i].stt}</td>
                                 <td>${danhSachCongNhan[i].hoVaTen}</td>
                                 <td>${danhSachCongNhan[i].ngaySinh}</td>
                                 <td>${danhSachCongNhan[i].diaChi}</td>
@@ -51,6 +51,7 @@
     tableString += `</table>`
     document.getElementById('result').innerHTML = tableString;
   }
+
 </script>
 </body>
 </html>
